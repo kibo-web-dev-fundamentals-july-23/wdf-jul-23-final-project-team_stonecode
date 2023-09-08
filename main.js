@@ -13,7 +13,10 @@ document.addEventListener("DOMContentLoaded", function () {
       expression = expression.replace(/\(/g, "*(");
 
       try {
-          currentOutput = eval(expression);
+          let result = eval(expression);
+          // Round the result to 8 decimal places
+          result = parseFloat(result.toFixed(8));
+          currentOutput = result;
           displayOutput.textContent = currentOutput;
       } catch (error) {
           currentOutput = "Error";
