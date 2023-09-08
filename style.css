@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing:border-box;
+    box-sizing: border-box;
     font-family: sans-serif;
 }
 
@@ -9,7 +9,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    padding: 20vh 0; /* Adjust the padding as needed */
 }
 
 .calculator {
@@ -99,5 +100,13 @@
 }
 
 .keys .key.action span {
-    color:#26FED7
+    color: #26FED7;
+}
+
+.keys .key.action[data-key="("] span {
+    color: #EB6666; /* Style for opening bracket */
+}
+
+.keys .key.action[data-key=")"] span {
+    color: #EB6666; /* Style for closing bracket */
 }
