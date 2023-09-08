@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('image2.jpg'); /* Replace 'background.jpg' with your image file's name and path */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+}
+
+.container {
+    max-width: 600px; /* Increase the container width */
+    padding: 30px; /* Increase padding for better readability */
+    background-color: rgba(255, 255, 255, 0.9); /* Increased opacity for clarity */
+    border-radius: 10px; /* Increase border radius for a softer look */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Increase box shadow for depth */
+}
+
+h1 {
+    font-size: 36px; /* Increase the title font size */
+    margin-bottom: 20px; /* Add spacing below the title */
+}
+
+p {
+    font-size: 20px; /* Increase the paragraph font size */
+}
+
+button {
+    padding: 15px 30px; /* Increase button padding for better interaction */
+    font-size: 24px; /* Increase button font size */
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block; /* Make the button a block-level element to center it */
+    margin: 20px auto; /* Center the button horizontally within the container */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
