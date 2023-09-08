@@ -6,17 +6,12 @@ document.addEventListener("DOMContentLoaded", function () {
   let currentOutput = "";
 
   function calculateExpression(expression) {
-      // Replace percentage symbol with its decimal representation
-      expression = expression.replace(/%/g, "/100");
-
-      // Replace parentheses for multiplication
-      expression = expression.replace(/\(/g, "*(");
-
       try {
-          let result = eval(expression);
-          // Round the result to 8 decimal places
-          result = parseFloat(result.toFixed(8));
-          currentOutput = result;
+          // Use math.js to evaluate expressions
+          const result = math.evaluate(expression);
+          // Format the result to 8 decimal places
+          const formattedResult = math.format(result, { precision: 8 });
+          currentOutput = formattedResult;
           displayOutput.textContent = currentOutput;
       } catch (error) {
           currentOutput = "Error";
